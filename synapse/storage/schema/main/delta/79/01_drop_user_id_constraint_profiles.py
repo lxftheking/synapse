@@ -23,8 +23,7 @@ def run_create(cur: LoggingTransaction, database_engine: BaseDatabaseEngine) -> 
             user_id text,
             displayname text,
             avatar_url text,
-            UNIQUE (full_user_id),
-            UNIQUE (user_id)
+            UNIQUE (full_user_id)
         )
         """
         cur.execute(create_sql)
